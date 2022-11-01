@@ -29,7 +29,7 @@ const CartScreen = () => {
 		}
 	}, [dispatch, productId, qty])
 
-	console.log(qty)
+	
 	return (
 		<Row>
 			<Col md={8}>
