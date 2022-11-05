@@ -22,21 +22,13 @@ const LoginScreen = () => {
 
 	useEffect(() => {
 		if (userInfo) {
-			navigate(`/${redirect}`)
+			navigate(redirect)
 		}
-	}, [navigate, redirect, location])
+	}, [navigate, redirect, location, userInfo])
 
 	const submitHandler = (e) => {
 		e.preventDefault()
 		dispatch(login(email, password))
-		if (redirect) {
-			navigate(`/${redirect}`)
-		} else {
-			navigate(`/`)
-
-		}
-
-
 	}
 
 	return (
