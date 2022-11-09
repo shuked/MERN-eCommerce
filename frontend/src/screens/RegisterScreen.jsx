@@ -28,7 +28,7 @@ const RegisterScreen = () => {
 		if (userInfo) {
 			navigate(redirect)
 		}
-	}, [navigate, redirect])
+	}, [navigate, redirect, userInfo])
 
 	const submitHandler = (e) => {
 		e.preventDefault()
