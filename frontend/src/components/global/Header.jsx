@@ -1,7 +1,7 @@
 import { LinkContainer } from "react-router-bootstrap"
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { logout } from "../actions/userActions"
+import { logout } from "../../actions/userActions"
 import SearchBox from './SearchBox'
 
 const Header = () => {

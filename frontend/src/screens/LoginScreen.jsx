@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import Message from "../components/Message"
-import Loader from "../components/Loader"
-import FormContainer from "../components/FormContainer"
+import Message from "../components/global/Message"
+import Loader from "../components/global/Loader"
+import FormContainer from "../components/global/FormContainer"
 import LoginForm from "../components/login-screen/LoginForm"
 import RegisterLink from "../components/login-screen/RegisterLink"
 
@@ -15,8 +15,6 @@ const LoginScreen = () => {
 	const { loading, error, userInfo } = userLogin
 
 	const redirect = location.search ? location.search.split("=")[1] : ""
-
-	console.log(redirect)
 
 	useEffect(() => {
 		if (userInfo) {
@@ -30,7 +28,7 @@ const LoginScreen = () => {
 			{error && <Message variant='danger'>{error}</Message>}
 			{loading && <Loader />}
 			<LoginForm />
-			<RegisterLink redirect={redirect}/>
+			<RegisterLink redirect={redirect} />
 		</FormContainer>
 	)
 }

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import Message from "../components/Message"
-import Loader from "../components/Loader"
-import FormContainer from "../components/FormContainer"
+import Message from "../components/global/Message"
+import Loader from "../components/global/Loader"
+import FormContainer from "../components/global/FormContainer"
 import RegisterForm from "../components/register-screen/RegisterForm"
 import LoginLink from "../components/register-screen/LoginLink"
 
 const RegisterScreen = () => {
-	const [message, setMessage] = useState(null)
-
 	const location = useLocation()
 	const navigate = useNavigate()
+
+	const [message, setMessage] = useState(null)
 
 	const userRegister = useSelector((state) => state.userRegister)
 	const { loading, error, userInfo } = userRegister
